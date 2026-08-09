@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FDFDFD">
+    android:background="#FDFDFD"
+    android:fitsSystemWindows="true">
 
     <TextView
         android:layout_width="match_parent"

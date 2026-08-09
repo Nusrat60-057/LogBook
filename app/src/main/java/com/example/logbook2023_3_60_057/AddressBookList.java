@@ -39,6 +39,8 @@ public class AddressBookList extends Activity {
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(AddressBookList.this, Login.class);
+                startActivity(intent);
                 finish();
             }
         });
