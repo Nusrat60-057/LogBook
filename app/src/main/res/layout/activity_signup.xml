@@ -17,7 +17,7 @@
         android:gravity="center"
         android:textColor="#FFFFFF"
         android:background="#00796B"
-        android:elevation="6dp"/>
+        android:elevation="10dp"/>
 
     <TableLayout
         android:layout_width="match_parent"

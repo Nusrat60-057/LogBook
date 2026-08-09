@@ -77,7 +77,8 @@ public class AddressBookDetails extends Activity {
 
         // Save data to SQLite Database
         String id = userName + System.currentTimeMillis();
-        db.insertEvent(id, userName, email, phone, dateBirth, presentAddress, permanentAddress);
+        String currentUserId = getSharedPreferences("UserPrefs", MODE_PRIVATE).getString("USER-ID", "");
+        db.insertEvent(id, currentUserId, userName, email, phone, dateBirth, presentAddress, permanentAddress);
         Toast.makeText(this, "Saved Successfully", Toast.LENGTH_SHORT).show();
         finish();
     }

@@ -15,6 +15,7 @@ public class Signup extends Activity {
     private CheckBox cbRememberUserId, cbRememberUserLogin;
     private Button btnAlreadyHaveAccount, btnExit, btnGo;
     private SharedPreferences sp;
+    private EventDB db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class Signup extends Activity {
         
         // Use a shared file so Login.java can also access it
         sp = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        db = new EventDB(this);
 
         boolean fromLogin = getIntent().getBooleanExtra("FROM_LOGIN", false);
         
@@ -96,12 +98,17 @@ public class Signup extends Activity {
             return;
         }
 
+        if (db.userExists(userId)) {
+            Toast.makeText(this, "User ID already exists", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        // Save to Database
+        db.insertUser(userId, userName, email, phone, password);
+
+        // Save session/pref info to SharedPreferences
         SharedPreferences.Editor editor = sp.edit();
         editor.putString("USER-ID", userId);
-        editor.putString("USER-NAME", userName);
-        editor.putString("PASS", password);
-        editor.putString("EMAIL", email);
-        editor.putString("PHONE", phone);
         editor.putBoolean("REM-LOGIN", cbRememberUserLogin.isChecked());
         editor.putBoolean("REM-USER", cbRememberUserId.isChecked());
         editor.apply();

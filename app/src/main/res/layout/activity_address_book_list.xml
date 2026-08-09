@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,15 +20,15 @@
         android:background="#00796B"
         android:elevation="6dp"/>
 
+
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
         android:layout_margin="16dp"
-        android:padding="12dp"
+        android:layout_weight="1"
         android:background="#FFFFFF"
-        android:stretchColumns="0"
-        xmlns:tools="http://schemas.android.com/tools">
+        android:padding="12dp"
+        android:stretchColumns="0">
 
         <ListView
             android:id="@+id/lvAddressBook"
@@ -35,10 +36,9 @@
             android:layout_height="wrap_content"
             android:divider="#EEEEEE"
             android:dividerHeight="1dp"
-            tools:listitem="@layout/row_address"/>
+            tools:listitem="@layout/row_address" />
 
     </TableLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"

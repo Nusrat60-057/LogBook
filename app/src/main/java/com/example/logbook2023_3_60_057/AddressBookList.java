@@ -112,16 +112,18 @@ public class AddressBookList extends Activity {
 
     private void loadData() {
         addressList.clear();
-        Cursor cursor = db.selectEvents("SELECT * FROM events");
+        String currentUserId = getSharedPreferences("UserPrefs", MODE_PRIVATE).getString("USER-ID", "");
+        Cursor cursor = db.selectEvents("SELECT * FROM events WHERE USER_ID=?", new String[]{currentUserId});
         if (cursor != null && cursor.moveToFirst()) {
             do {
                 String id = cursor.getString(0);
-                String name = cursor.getString(1);
-                String email = cursor.getString(2);
-                String phone = cursor.getString(3);
-                String dob = cursor.getString(4);
-                String present = cursor.getString(5);
-                String permanent = cursor.getString(6);
+                // USER_ID is at index 1
+                String name = cursor.getString(2);
+                String email = cursor.getString(3);
+                String phone = cursor.getString(4);
+                String dob = cursor.getString(5);
+                String present = cursor.getString(6);
+                String permanent = cursor.getString(7);
                 
                 addressList.add(new ActivityList(id, name, email, phone, dob, present, permanent));
             } while (cursor.moveToNext());

@@ -15,6 +15,7 @@ public class Login extends Activity {
     private CheckBox cbRememberUserId, cbRememberUserLogin;
     private Button btnNoAccount, btnExit, btnGo;
     private SharedPreferences sp;
+    private EventDB db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class Login extends Activity {
         setContentView(R.layout.activity_login);
         
         sp = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        db = new EventDB(this);
         
         etUserId = findViewById(R.id.etUserId);
         etPassword = findViewById(R.id.etPassword);
@@ -49,13 +51,11 @@ public class Login extends Activity {
             public void onClick(View view) {
                 String inputId = etUserId.getText().toString().trim();
                 String inputPass = etPassword.getText().toString().trim();
-                
-                String savedId = sp.getString("USER-ID", "");
-                String savedPass = sp.getString("PASS", "");
 
-                if (inputId.equals(savedId) && inputPass.equals(savedPass)) {
+                if (db.isUserValid(inputId, inputPass)) {
                     // Update login preferences
                     SharedPreferences.Editor editor = sp.edit();
+                    editor.putString("USER-ID", inputId);
                     editor.putBoolean("REM-LOGIN", cbRememberUserLogin.isChecked());
                     editor.putBoolean("REM-USER", cbRememberUserId.isChecked());
                     editor.apply();
