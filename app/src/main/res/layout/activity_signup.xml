@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FDFDFD">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Sign Up"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:background="#00796B"
+        android:elevation="6dp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:stretchColumns="1">
+
+        <!-- User ID -->
+        <TableRow
+            android:layout_marginBottom="14dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User ID"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#455A64"
+                android:paddingEnd="12dp"/>
+            <EditText
+                android:id="@+id/etUserId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="4-6 digits"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:backgroundTint="#00796B"/>
+        </TableRow>
+
+        <!-- User Name -->
+        <TableRow
+            android:layout_marginBottom="14dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#455A64"
+                android:paddingEnd="12dp"/>
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                android:maxLength="20"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:backgroundTint="#00796B"/>
+        </TableRow>
+
+        <!-- Email -->
+        <TableRow
+            android:layout_marginBottom="14dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#455A64"
+                android:paddingEnd="12dp"/>
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="example@mail.com"
+                android:maxLength="120"
+                android:inputType="textEmailAddress"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:backgroundTint="#00796B"/>
+        </TableRow>
+
+        <!-- Phone -->
+        <TableRow
+            android:layout_marginBottom="14dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#455A64"
+                android:paddingEnd="12dp"/>
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="+880"
+                android:inputType="phone"
+                android:maxLength="14"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="10dp"
+                android:backgroundTint="#00796B"/>
+        </TableRow>
+
+        <!-- Password -->
+        <TableRow
+            android:layout_marginBottom="14dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#455A64"
+                android:paddingEnd="12dp"/>
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="4-6 digits"
+                android:inputType="numberPassword"
+                android:maxLength="6"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="10dp"
+                android:backgroundTint="#00796B"/>
+        </TableRow>
+
+        <!-- Re-enterPass -->
+        <TableRow
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Re-enterPass"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#455A64"
+                android:paddingEnd="12dp"/>
+            <EditText
+                android:id="@+id/etReenterPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirm password"
+                android:inputType="numberPassword"
+                android:maxLength="6"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="10dp"
+                android:backgroundTint="#00796B"/>
+        </TableRow>
+
+        <CheckBox
+            android:id="@+id/cbRememberUserId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember User ID"
+            android:textColor="#546E7A"
+            android:textStyle="bold"
+            android:buttonTint="#00796B"
+            android:paddingStart="8dp"/>
+
+        <CheckBox
+            android:id="@+id/cbRememberUserLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember Login"
+            android:textColor="#546E7A"
+            android:textStyle="bold"
+            android:buttonTint="#00796B"
+            android:paddingStart="8dp"/>
+
+        <Button
+            android:id="@+id/btnAlreadyHaveAccount"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Already have an account? Login"
+            android:textAllCaps="false"
+            android:textColor="#00796B"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="Exit"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#78909C"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/btnGo"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="Go"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#00796B"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>

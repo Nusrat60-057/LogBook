@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FDFDFD"
+    android:fitsSystemWindows="true">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Address Book Details"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:background="#00796B"
+        android:elevation="4dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Name Group with ImageView on the right -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="#455A64"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="2dp"/>
+                <EditText
+                    android:id="@+id/etUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:maxLength="20"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/ic_user"
+                    android:drawablePadding="10dp"
+                    android:backgroundTint="#00796B"
+                    android:paddingStart="4dp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivUserPhoto"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="12dp"
+                android:background="#EEEEEE"
+                android:src="@drawable/ic_user"
+                android:scaleType="centerInside"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="#455A64"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="example@mail.com"
+            android:inputType="textEmailAddress"
+            android:maxLength="120"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:backgroundTint="#00796B"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="4dp"/>
+
+        <!-- Phone -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:textColor="#455A64"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="+880"
+            android:inputType="phone"
+            android:maxLength="14"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="10dp"
+            android:backgroundTint="#00796B"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="4dp"/>
+
+        <!-- Date of Birth -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date of Birth"
+            android:textColor="#455A64"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/etDateBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DD/MM/YYYY"
+            android:inputType="text"
+            android:digits="0123456789/"
+            android:maxLength="10"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="10dp"
+            android:backgroundTint="#00796B"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="4dp"/>
+
+        <!-- Present Address -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Present Address"
+            android:textColor="#455A64"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/etPresentAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:maxLength="200"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="10dp"
+            android:backgroundTint="#00796B"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="4dp"
+            android:gravity="top"/>
+
+        <!-- Permanent Address -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Permanent Address"
+            android:textColor="#455A64"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/etPermanentAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:maxLength="200"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="10dp"
+            android:backgroundTint="#00796B"
+            android:paddingStart="4dp"
+            android:gravity="top"/>
+
+    </LinearLayout>
+
+    <!-- Footer Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Discard"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#78909C"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Save"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#00796B"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="#FFFFFF"
+    android:gravity="center_vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgPhoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:background="#F5F5F5"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_user"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:text="Name"
+            android:textColor="#212121"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:text="Phone"
+                android:textColor="#616161"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_phone"
+                android:drawablePadding="8dp"
+                app:drawableTint="#00796B"/>
+
+            <TextView
+                android:id="@+id/tvDob"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:text="DOB"
+                android:textColor="#616161"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_calendar"
+                android:drawablePadding="8dp"
+                app:drawableTint="#00796B"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

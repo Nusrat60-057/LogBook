@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FDFDFD"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Address Book List"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:background="#00796B"
+        android:elevation="6dp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        android:background="#FFFFFF"
+        android:stretchColumns="0"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <ListView
+            android:id="@+id/lvAddressBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#EEEEEE"
+            android:dividerHeight="1dp"
+            tools:listitem="@layout/row_address"/>
+
+    </TableLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="Exit"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#78909C"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnAddNew"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="Add New"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#00796B"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>
